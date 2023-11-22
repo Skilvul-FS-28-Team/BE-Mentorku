@@ -2,7 +2,7 @@
 const {
   Model
 } = require('sequelize');
-const { NOT } = require('sequelize/types/deferrable');
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     age: DataTypes.INTEGER,
-    gender: DataTypes.BOOLEAN
+    gender: DataTypes.STRING
 
   }, {
     sequelize,
