@@ -1,9 +1,9 @@
 const { Mentor } = require('../models');
 
-
 module.exports = {
     getMentor: async(req, res) => {
-        const mentor = await Mentor.findAll();
+        const mentor = await Mentor.findAll({ include: 'Mentoring_time' });
+
 
         res.json({
             message: 'Welcome to Mentorku',
