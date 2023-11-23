@@ -4,13 +4,9 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Mentor extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+    
     static associate(models) {
-      // define association here
+      Mentor.hasMany(models.Mentoring_time, { foreignKey: 'mentor_id' });
     }
   }
   Mentor.init({
@@ -24,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     phone: DataTypes.STRING,
     company: DataTypes.STRING,
     position: DataTypes.STRING,
-    desc: DataTypes.STRING,
+    desc: DataTypes.TEXT,
     instagram: DataTypes.STRING,
     linkedin: DataTypes.STRING,
     personal_web: DataTypes.STRING,
@@ -38,3 +34,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Mentor;
 };
+

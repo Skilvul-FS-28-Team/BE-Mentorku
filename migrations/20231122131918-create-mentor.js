@@ -36,11 +36,11 @@ module.exports = {
       company: {
         type: Sequelize.STRING
       },
-      posistion: {
+      position: {
         type: Sequelize.STRING
       },
       desc: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       instagram: {
         type: Sequelize.STRING
@@ -65,11 +65,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       }
     });
   },
