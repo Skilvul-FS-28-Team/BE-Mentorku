@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       Mentor.hasMany(models.Mentoring_time, { foreignKey: 'mentor_id', as: 'Mentoring_time' });
+      Mentor.hasMany(models.payment, { foreignKey: 'id_mentor', as: 'Payment' });
     }
   }
   Mentor.init({

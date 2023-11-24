@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 module.exports = {
     getAllUser: async (req, res) => {
-        const users = await User.findAll();
+        const users = await User.findAll({include: 'Payment'});
         res.send(users);
     },
     addUser: async (req, res) => {
