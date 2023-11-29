@@ -7,6 +7,7 @@ module.exports = {
         const kataKunci = req.query.q;
 
         const mentor = await Mentor.findAll({
+            attributes: { exclude: ['password'] },
             include: ['Mentoring_time', 'Payment'],
             where: {
                 name: {
