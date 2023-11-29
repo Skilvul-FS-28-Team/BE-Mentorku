@@ -1,10 +1,11 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "dyonz123",
-    "database": "Mentorku_BE",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "freedb_gidion",
+    "password": "hGzWVwdRM8!4M6G",
+    "database": "freedb_mentorku-skilvul",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql",
+    "port": "3306",
   },
   "test": {
     "username": "root",
