@@ -60,7 +60,7 @@ module.exports = {
             }
 
             if(bcrypt.compareSync(data.password, searchMail.password)){
-                let token = jwt.sign({email:searchMail.email}, 'secret');
+                let token = jwt.sign({email:searchMail.email, userId: searchMail.id}, 'secret');
 
                 res.json({
                     message: 'Login berhasil',
